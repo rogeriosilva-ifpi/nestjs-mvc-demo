@@ -9,17 +9,12 @@
 <body>
   <img id="logo" src="images/nest-logo.svg" alt="NestJS Logo">
   
-  <h1>Hello NestJS MVC</h1>
-  <p>Olá {{ nome }}! Seu nome tem {{ qtd_letras }} letras</p>
-
-  {{#if isLoggedIn }}
-    <h2>Logado como: {{user.name}} <a href="logout">sair</a></h2>
-  {{else }}  
-    <a href="login">Entrar</a>
-  {{/if}}
-
-  <h2>Calcule seu IMC</h2>
-  <a href="form-imc">Calcular meu IMC</a>
+  <h1>Login</h1>
+  <form action="login" method="post">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="senha">
+    <input type="submit" value="Entrar">
+  </form>
 
 </body>
 </html>
