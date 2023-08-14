@@ -15,13 +15,13 @@ import { CalcularIMCInput } from './imc.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get('/')
   @Render('index')
-  hello(@Query('nome') nome: string) {
+  hello(@Query('nome') nome = 'Visitante') {
     const context = {
-      name: nome || 'Rogério',
+      nome,
+      qtd_letras: nome.length,
     };
-
     return context;
   }
 
